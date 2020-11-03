@@ -2,17 +2,14 @@
 #include <ESP8266WiFi.h>
 #include <espnow.h>
 
-// MAC Address (NODEMCU)-Receptor
+// MAC Address (NODEMCU)-NodoCentral
 uint8_t broadcastAddress[] = {0xEC, 0xFA, 0xBC, 0x21, 0x2A, 0x8E}; //
 
 const int analogPin = A0;   // pin analógico
 const int ledPin = 5;       // pin de parpadeo en la recepción del callback
-//int incr = -5;
-//int analog = 850;         // valor analógico leido 
 bool receivedOk = false;    // indica si se recibió un mensaje
 
-// Estructura del menaje a enviar
-typedef struct struct_message {
+typedef struct struct_message { // Estructura del menaje a enviar
   int valueA0;
 } struct_message;
 
